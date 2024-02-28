@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Padroes4M/Scenes/Initialization.unity
+    guid: 313397c06a55baf4dbca51d702f3469a
+  - enabled: 1
+    path: Assets/Padroes4M/Scenes/Gameplay.unity
+    guid: 395f142a754475249927d5ab780b75e5
+  - enabled: 1
+    path: Assets/Padroes4M/Scenes/GUI.unity
+    guid: 5384b5658bae5464989f51fb9524bd5e
+  - enabled: 1
+    path: Assets/Padroes4M/Scenes/MainMenu.unity
+    guid: 1d31014edc544e24c9efd280632eef43
+  - enabled: 1
+    path: Assets/Padroes4M/Scenes/Splash.unity
+    guid: 4d97911baab70c84ea224b26625456e7
+  m_configObjects: {}
