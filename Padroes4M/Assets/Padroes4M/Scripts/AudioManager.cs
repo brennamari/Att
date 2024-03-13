@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +17,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public float volume = 0.5f;
+    public float Volume = 0.5f;
+    
+    [SerializeField] private float volume;
 
     private void Awake()
     {
@@ -30,7 +34,22 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public float Volume
+    private void OnEnable()
+    {
+        AudioObserverManager.OnVolumesSliderValueChanged += ProcessVolumeChanged;
+    }
+
+    private void OnDisable()
+    {
+        AudioObserverManager.OnVolumesSliderValueChanged -= ProcessVolumeChanged;
+    }
+
+    private void ProcessVolumeChanged(float newVolume)
+    {
+        volume = newVolume;
+    }
+
+    public float Vol
     {
         get
         {
@@ -41,6 +60,8 @@ public class AudioManager : MonoBehaviour
             volume = Mathf.Clamp01(value);
         }
     }
+    
+    
     
     
 }
