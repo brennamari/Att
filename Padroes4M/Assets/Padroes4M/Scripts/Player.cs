@@ -7,7 +7,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public static Action<float> OnCoinsValueChanged;
-    
+
     // permite que o criador do conteudo do valor do slider manda
     // os dados
 
@@ -15,4 +15,5 @@ public class Player : MonoBehaviour
     {
         // tem algum inscrito? se tiver mande as notificções
         OnCoinsValueChanged?.Invoke(coins);
+    }
 }
